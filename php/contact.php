@@ -18,7 +18,7 @@ if ( $_SERVER['REQUEST_METHOD'] == 'POST' ) {
                        'X-Mailer: PHP/' . phpversion(); 
                      $msg = $msg .'' . "\r\n" . "\r\n" . $headers;
 
-            mail('hamida.dervic@outlook.com', $subject, $msg );
+            mail('someemail@gmail.com', $subject, $msg );
 	    }
 
     }
