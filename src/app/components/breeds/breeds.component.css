@@ -1,0 +1,21 @@
+.breed-cat {
+	width: 150px;
+	height: 150px;
+	border-radius: 100%;
+	display: block;
+	margin: auto;
+	overflow: hidden;
+}
+
+.breed-cat img {
+	height: 70%;
+	min-width: 100%;
+	display: block;
+	margin:auto;
+}
+
+.breed-description {
+	width: 70%;
+	text-align: center;
+	margin: auto;
+}

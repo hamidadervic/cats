@@ -1,0 +1,57 @@
+ <h3 class="text-uppercase contact"> Contact cat </h3>
+
+<div *ngIf="!submitted; else formSubmited" class="row" id="contact">
+    <div class="col-md-6 col-centered">
+        <form #contactForm="ngForm"> 
+        	<div class="form-group">
+        		<label for="name"> Your name </label>
+        		<input type="text" class="form-control" id="name" name="name" [(ngModel)]="name" 
+        		required
+        		#mname="ngModel">
+        		<div [hidden]="mname.valid || mname.pristine"
+        		class="alert alert-danger">
+        		{{ invalidName }}
+        	</div>
+        </div>
+
+            <div class="form-group">
+               <label for="email"> E-mail </label>
+               <input type="email" class="form-control" id="email" name="email" [(ngModel)]="email" 
+               required
+               #memail="ngModel">
+               <div [hidden]="memail.pristine"
+        		class="alert alert-danger">
+        		{{ invalidEmail }}
+        	   </div>
+            </div>
+
+            <div class="form-group">
+                <label for="message"> Message </label>
+                <textarea id="message" rows="3" class="form-control" name="message"  [(ngModel)]="message" 
+                required
+                #mmessage="ngModel"
+                ></textarea>
+                <div [hidden]="mmessage.valid || mmessage.pristine"
+        		class="alert alert-danger">
+        		 {{ invalidMessage }}
+        	</div>
+            </div>
+
+            <button type="submit" 
+                    class="btn btn-danger"
+                    style="width: 100%;" 
+                    [disabled]="!contactForm.form.valid" 
+                    (click)="send()"> Contact cat </button>
+         </form>
+    </div>
+</div>
+
+<ng-template #formSubmited> 
+
+<div class="row">
+    <div class="col-md-6 col-centered alert alert-success">
+       <p> Dear {{ name }}, your e-mail was sent and cat will contact you as soon as possible. </p>
+    </div>
+</div>
+
+</ng-template>

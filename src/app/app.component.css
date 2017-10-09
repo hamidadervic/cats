@@ -1,0 +1,148 @@
+
+#background-div {
+	width: 100%;
+	position: relative;
+	overflow: hidden;
+	min-height: 300px;
+	background-color: rgba(0, 0, 0, 0.85);
+}
+
+
+nav {
+	position: absolute;
+	width: 100%;
+	top: 0;
+	left: 0;
+	overflow: auto;
+	position: fixed;
+	z-index: 2;
+	padding: 0;
+	background-color: rgb(255, 255, 255);
+	box-shadow: 1px 1px 5px #000000;
+}
+
+nav > div {
+	overflow: auto;
+	margin-top: 20px;
+}
+
+#logo {
+	 width: 50px;
+	 height: 50px;
+     float: left;
+}
+
+#logo img {
+	width: 100%;
+	height: auto;
+}
+
+
+#main-nav {
+	float: right;
+}
+
+#menu  {
+	display: none;
+	width: 100%;
+	overflow: auto;
+}
+
+
+#menu img {
+	display: block;
+	float: right;
+	width: 50px;
+	height: 50px;
+}
+
+#main-nav ul {
+	list-style: none;
+	width: 100%;
+}
+
+#main-nav li {
+	display: inline-block;
+	padding-right: 15px;
+	font-weight: bold;
+}
+
+
+#background-details {
+	position: absolute;
+	top: 0;
+	width: 100%;
+	background-color: rgba(0, 0, 0, 0.85);
+	height: 100%;
+}
+
+.cat-quote {
+	margin: 30% auto;
+	text-align: center;
+	color: #ffffff;
+}
+
+.cat-quote button {
+	display: block;
+	margin: auto;
+	margin-top: 15px;
+}
+
+.cat-quote h1 {
+	width: 100%;
+	display: block;
+	font-size: 4em;
+}
+
+.cat-quote h6 {
+	width: 100%;
+	display: block;
+}
+
+
+/* 768 */
+
+@media screen and (max-width: 768px) {
+	.cat-quote h1 {
+		font-size: 3em;
+	}
+}
+
+
+@media screen and (max-width: 480px) {
+
+	.cat-quote {
+		margin-top: 40%;
+	}
+	.cat-quote h1 {
+		font-size: 2em;
+	}
+
+	#background-div > div img {
+		height: 300px;
+		width: auto;
+	}
+}
+
+@media screen and (max-width: 350px) {
+
+	#menu {
+		display: block;
+	}
+
+	#main-nav li {
+		text-align: right;
+		display: none;
+		width: 100%;
+		font-size: 14px;
+	}
+
+	.cat-quote {
+		margin-top: 50%;
+	}
+
+	.cat-quote h1 {
+		font-size: 1.5em;
+	}
+
+}
